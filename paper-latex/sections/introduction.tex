@@ -1,12 +1,39 @@
-In recent years, the field of [Your Field] has seen significant advancements, driven by [mention key factors or technologies]. This paper aims to explore [briefly state the main topic or problem addressed in the paper].
+The Blockchain technology is a constantly evolving field that has garnered significant attention and value in recent years. However, despite its growing prominence, the decentralized systems are facing challenges in scaling Blockchains in terms of data availability. Data availability is a critically important aspect of blockchain technology. Data availability refers to the ability of a blockchain network to ensure that all necessary data is accessible and retrievable by all its participants. In a decentralized system, Where multiple nodes work together to validate and store data/transactions, ensuring that the data is avaliable, valid and accessible is quite a important factor for maintaing the integrity and decentralized nature of the network \cite{Avail_Unifying_Blockchain_Network}.
 
-The motivation behind this research stems from [explain the motivation, why this topic is important]. By addressing [specific issues or gaps in the existing literature], we hope to contribute to [state the expected contributions or outcomes of the research].
 
-The objectives of this study are as follows:
+This study provides a Comparative study among the latest avaliable Data availability solutions/models in terms of bandwidth, time and other criteria to provide a bigger overview of pro's and con's of every model.
+
+The Models included in study are as follows:
 \begin{itemize}
-    \item Objective 1: [Describe the first objective]
-    \item Objective 2: [Describe the second objective]
-    \item Objective 3: [Describe the third objective]
+    \item Polkadot's ELVES
+    \item Celestia
+    \item Espresso Tiramisu
+    \item NEAR
+    \item Avail
 \end{itemize}
 
-This introduction sets the stage for the subsequent sections, where we will delve into the methodology, results, and conclusions drawn from our research.
+The below is a breif short introduction of the models that will be discussed and analyzed in the study.
+
+\subsection{Polkadot ELVES}
+We employed a quantitative research design to gather and analyze data systematically.
+
+\subsection{Celestia}
+We employed a quantitative research design to gather and analyze data systematically.
+
+\subsection{Espresso Tiramisu}
+Espresso-Tiramisu DA resolves the Data availability scaling issue with a three layred system below is the short overview of these three layers.
+\begin{itemize}
+    \item Savoiardi (VID Layer) - Erause codes and stores data across all the nodes \cite{Espresso:Hotshot_and_Triamisu}.
+    \item Mascarpone (DA Committe Layer) - A Small elected Committee stores the full data and guarantees to efficiently recover data \cite{Espresso:Hotshot_and_Triamisu}.
+    \item Cocoa (CDN Layer) - Uploads the data on web2 based CDN solution for seamless and speedy data recovery \cite{Espresso:Hotshot_and_Triamisu}.
+\end{itemize}
+Espresso utilizes Hotshot consensus which is a optimistically responsive, communication-efficient consensus protocol in a proof-of-stake setting that is resistant to bribing adversaries and scalable to large number of nodes.
+\subsection{NEAR}
+We employed a quantitative research design to gather and analyze data systematically.
+
+\subsection{Avail}
+Avail DA helps blockchains scale by providing an abundance of data availability capacity. Its modular design scales data
+availability capacity with demand, and transaction data can be cryptographically verified quickly by anyone running an Avail
+light client \cite{Avail_Unifying_Blockchain_Network}.Avail utilizes Erasure coding, KZG commitments along with light client to ensure its data availability.
+
+As for consensus Avail uses BABE/GRANDPA hybrid consensus used by polkadot for block production and finality. Avail also provides Application Specific Data Retrieval (ASDR) this helps rollups to fetch and decode their own blobs even tho the block might contain many app's data. \cite{Avail_The_DA_Blockchain}.
