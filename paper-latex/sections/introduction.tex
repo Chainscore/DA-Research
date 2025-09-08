@@ -37,3 +37,30 @@ availability capacity with demand, and transaction data can be cryptographically
 light client \cite{Avail_Unifying_Blockchain_Network}.Avail utilizes Erasure coding, KZG commitments along with light client to ensure its data availability.
 
 As for consensus Avail uses BABE/GRANDPA hybrid consensus used by polkadot for block production and finality. Avail also provides Application Specific Data Retrieval (ASDR) this helps rollups to fetch and decode their own blobs even tho the block might contain many app's data. \cite{Avail_The_DA_Blockchain}.
+\begin{table}[ht]
+\centering
+\caption{Short Comparison of all DA solutions}
+\setlength{\tabcolsep}{4pt} % tighter columns
+\renewcommand{\arraystretch}{1.15}
+\footnotesize
+\begin{tabular}{|p{1.4cm}|p{1.4cm}|p{1.5cm}|p{1.5cm}|p{1.2cm}|p{1.2cm}|}
+\hline
+\textbf{Feature} &
+\makecell[l]{\textbf{Polkadot's}\\\textbf{ELVES}} &
+\textbf{Celestia} &
+\makecell[l]{\textbf{Espresso}\\\textbf{Tiramisu}} &
+\textbf{NEAR} &
+\textbf{Avail} \\
+\hline
+Consensus & BABE/
+GRANDPA & Tendermint & HotShot & Night\-shade & --- \\
+\hline
+Storage & Sharding & Reed-Solomon & Three-layer & Sharding & KZG \\
+\hline
+Block Time & 20s & 15s & \textasciitilde6s & 1s & 20s \\
+\hline
+Validation & Light Client & Light Client & Full Node & Chunk-only & Light Client \\
+\hline
+\end{tabular}
+\label{tab:da_comparison}
+\end{table}
