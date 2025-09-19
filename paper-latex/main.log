@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.8.25)  18 SEP 2025 19:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.8.25)  19 SEP 2025 21:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -316,53 +316,106 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
-) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count290
+\rotFPtop=\skip57
+\rotFPbot=\skip58
+\rot@float@box=\box57
+\rot@mess@toks=\toks27
+) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
+ (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+ (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks28
+\XKV@tempa@toks=\toks29
+)
+\XKV@depth=\count291
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+ (/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box58
+)
+\tc@llx=\dimen182
+\tc@lly=\dimen183
+\tc@urx=\dimen184
+\tc@ury=\dimen185
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+ (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen186
+\adjbox@Height=\dimen187
+\adjbox@Depth=\dimen188
+\adjbox@Totalheight=\dimen189
+\adjbox@pwidth=\dimen190
+\adjbox@pheight=\dimen191
+\adjbox@pdepth=\dimen192
+\adjbox@ptotalheight=\dimen193
+ (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count292
+) (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box59
+\sift@deathcycles=\count293
+\@vwid@loff=\dimen194
+\@vwid@roff=\dimen195
+)) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count290
-\l__pdf_internal_box=\box57
+\l__color_backend_stack_int=\count294
+\l__pdf_internal_box=\box60
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
 
 -- Lines per column: 56 (exact).
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count291
-\scratchdimen=\dimen182
-\scratchbox=\box58
-\nofMPsegments=\count292
-\nofMParguments=\count293
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count294
-\MPscratchDim=\dimen183
-\MPnumerator=\count295
-\makeMPintoPDFobject=\count296
-\everyMPtoPDFconversion=\toks28
+\scratchcounter=\count295
+\scratchdimen=\dimen196
+\scratchbox=\box61
+\nofMPsegments=\count296
+\nofMParguments=\count297
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count298
+\MPscratchDim=\dimen197
+\MPnumerator=\count299
+\makeMPintoPDFobject=\count300
+\everyMPtoPDFconversion=\toks31
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 15.
+Package hyperref Info: Link coloring OFF on input line 18.
  (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
@@ -371,71 +424,10 @@ Package hyperref Info: Link coloring OFF on input line 15.
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
-[]|\OT1/ptm/m/n/8 BABE/
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 66--66
-[]|\OT1/ptm/m/n/8 Night-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 66--68
-[]|\OT1/ptm/m/n/8 BABE/
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--69
-[]|\OT1/ptm/m/n/8 Erasure
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--69
-[]|\OT1/ptm/m/n/8 Reed-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--69
-[]|\OT1/ptm/m/n/8 Three-layer
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--73
-[]|\OT1/ptm/m/n/8 Max-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--73
-[]|\OT1/ptm/m/n/8 0.0159
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--77
-[]|\OT1/ptm/m/n/8 Total
- []
-
-
-Underfull \hbox (badness 7722) in paragraph at lines 81--81
-[]|\OT1/ptm/m/n/8 Native To-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 87--87
-[]|\OT1/ptm/m/n/8 Txs per
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--89
-[]|\OT1/ptm/m/n/8 Nakamoto
- []
-
-
-Overfull \hbox (40.6479pt too wide) in paragraph at lines 56--93
- [][] 
- []
-
-) (./sections/methodology.tex) (./sections/results.tex) (./sections/conclusion.tex) (./main.bbl
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 88.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)) (./main.bbl
 Underfull \hbox (badness 2261) in paragraph at lines 30--31
 []\OT1/ptm/m/n/8 N. Pro-to-col, ``The near white pa-per,'' []$https : / / pages . near . org / papers /
  []
@@ -452,23 +444,25 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2] (./main.aux)
+[2
+
+] [3] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 44F353733E7D2BD09B9F06E6559B5DCC;1841.
+(rerunfilecheck)             Checksum: CF8721D34EC4B2A1AC391EEE26EA1B79;728.
  ) 
 Here is how much of TeX's memory you used:
- 10078 strings out of 476034
- 162049 string characters out of 5792864
- 1880388 words of memory out of 6000000
- 30378 multiletter control sequences out of 15000+600000
- 548348 words of font info for 94 fonts, out of 8000000 for 9000
+ 11338 strings out of 476034
+ 184848 string characters out of 5792864
+ 1873388 words of memory out of 6000000
+ 31612 multiletter control sequences out of 15000+600000
+ 548662 words of font info for 95 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
- 75i,18n,76p,922b,437s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 73078 bytes).
+ 75i,10n,76p,922b,446s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (3 pages, 79888 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 116 compressed objects within 2 object streams
- 25 named destinations out of 1000 (max. 500000)
- 137 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 98 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
+ 16 named destinations out of 1000 (max. 500000)
+ 57 words of extra memory for PDF output out of 10000 (max. 10000000)
 

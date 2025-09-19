@@ -47,47 +47,56 @@ availability capacity with demand, and transaction data can be cryptographically
 light client \cite{Avail_Unifying_Blockchain_Network}.Avail utilizes Erasure coding, KZG commitments along with light client to ensure its data availability.
 
 As for consensus Avail uses BABE/GRANDPA hybrid consensus used by polkadot for block production and finality. Avail also provides Application Specific Data Retrieval (ASDR) this helps rollups to fetch and decode their own blobs even tho the block might contain many app's data. \cite{Avail_The_DA_Blockchain}.
-\begin{table}[ht]
+\begin{table*}[ht]
 \centering
-\caption{Short Comparison of all DA solutions}
-\setlength{\tabcolsep}{4pt} % tighter columns
-\renewcommand{\arraystretch}{1.15}
+\caption{Comprehensive Comparison of Data Availability Solutions}
+\setlength{\tabcolsep}{4pt} % column spacing
+\renewcommand{\arraystretch}{1.3} % row spacing
 \footnotesize
-\begin{tabular}{|p{1.4cm}|p{1.4cm}|p{1.5cm}|p{1.5cm}|p{1.2cm}|p{1.5cm}|}
+\begin{tabular}{|l|c|c|c|c|c|}
 \hline
-\textbf{Feature} &
-\makecell[l]{\textbf{Polkadot}\\} &
-\textbf{Celestia} &
-\makecell[l]{\textbf{Espresso}\\\textbf{Tiramisu}} &
-\textbf{NEAR} &
-\textbf{Avail} \\
+\textbf{Feature} & \textbf{Polkadot} & \textbf{Celestia} & \textbf{Espresso} & \textbf{NEAR} & \textbf{Avail} \\
+ & \textbf{ELVES} & & \textbf{Tiramisu} & & \\
 \hline
-Consensus & BABE/
-GRANDPA & Tendermint & HotShot & Night\-shade & BABE/
-GRANDPA \\
+\multicolumn{6}{|c|}{\textbf{Consensus \& Architecture}} \\
 \hline
-Storage & Erasure Coding  & Reed-Solomon & Three-layer system & Sharding & KZG + Erasure Coding \\
+Consensus & BABE + & Tendermint & HotShot & Nightshade & BABE + \\
+Mechanism & GRANDPA & BFT & PoS & Sharding & GRANDPA \\
 \hline
-Block Time & 20s & 15s & \textasciitilde6s & 1s & 20s \\
+DA Model & Reed-Solomon & 2D Reed-Solomon & Three-layer & Sharding-based & KZG + 2D \\
+ & Erasure Coding & + Namespaced & Tiramisu & Parallelization & Reed-Solomon \\
+ & & Merkle Trees & System & & Erasure Coding \\
 \hline
-Max-Throughput & - & 0.0159 MiB/s & 5 MB/s & -  & 0.2 MiB/s \\
+Native Token & DOT & TIA & - & NEAR & AVAIL \\
+\hline
+Total Validators & 600 & 100 & 100 & 300 & 105 \\
+\hline
+\multicolumn{6}{|c|}{\textbf{Performance Metrics}} \\
+\hline
+Block Time & 20s & 6Ss & $\sim$6s & 1s & 20s \\
 \hline
 Block Size & 5 MB & 8 MB & 1 MB & 4 MB & 4 MB \\
 \hline
-Total Validators & 600 & 100 &  100 & 300 & 1000\\
+TPS & 10 & 0.48 & N/A & 53 & 420 \\
 \hline
-Cost/mb & - & 0.08 USD & - & 100kb per NEAR token & 0.0173 USD\\
+Max Throughput & 40 MB/s & $\sim$0.0159 MB/s & $\sim$5 MB/s & 16MB/s & $\sim$0.2 MB/s \\
 \hline
-Native Token & DOT & - & TIA & NEAR &  AVAIL \\
+Latency & 6--30s & 5--15s & N/A & 1--2s & 20--40s \\
 \hline
-Latency & 6-30s & 5-15s & - & 1-2s & 20-40s \\
+\multicolumn{6}{|c|}{\textbf{Economic \& Security}} \\
 \hline
-TPS & 10 & - & - & 53 & 420 \\
+Cost per MB & $\sim$\$516 & $\sim$\$0.08 & N/A & 100kb per & $\sim$\$0.0173 \\
+ & & & & NEAR token & \\
 \hline
-Txs per block & - & - & - & - & - \\
+Nakamoto & 174 & 9 & N/A & 10 & 34 \\
+Coefficient & & & & & \\
 \hline
-Nakamoto Coeff & 174 & - & - & 10 & - \\
+\multicolumn{6}{|c|}{\textbf{Key Features}} \\
+\hline
+Unique & Cross-chain & First modular & Web2 CDN & High-speed & Application \\
+Advantages & interoperability & DA solution & integration & sharding & Specific Data \\
+ & via parachains & for rollups & (Cocoa layer) & ~100k TPS & Retrieval (ASDR) \\
 \hline
 \end{tabular}
 \label{tab:da_comparison}
-\end{table}
+\end{table*}
