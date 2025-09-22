@@ -23,6 +23,15 @@
 \bibitem{Avail_Unifying_Blockchain_Network}
 Avail-Team, ``Avail: A unifying blockchain network,'' \emph{Avail Project Documentation}, vol.~1, no.~1, 2024.
 
+\bibitem{polkadot_article}
+Polkadot, ``Polkadot protocol architecture,'' \url{https://docs.polkadot.com/polkadot-protocol/architecture/polkadot-chain/overview.}, 2025, accessed: 2025-09-22.
+
+\bibitem{Overview_of_polkadot}
+J.~Burdges, A.~Cevallos, P.~Czaban, R.~Habermeier, S.~Hosseini, F.~Lama, H.~Kilinc, X.~Luo, F.~Shirazi, A.~Stewart, and G.~Wood, ``Overview of polkadot and its design considerations,'' 2020.
+
+\bibitem{AlBassam_LazyLedger}
+M.~Al-Bassam, ``Lazyledger: A distributed data availability ledger with client-side smart contracts,'' arXiv preprint arXiv:1905.09274, 2019, \url{https://arxiv.org/abs/1905.09274}.
+
 \bibitem{Espresso:Hotshot_and_Triamisu}
 Espresso-Systems, ``The espresso sequencer: Hotshot consensus and triamisu data availability,'' \emph{Avail Project Documentation}, vol.~1, no.~1, 2023.
 

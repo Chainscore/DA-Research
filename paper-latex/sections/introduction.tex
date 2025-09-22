@@ -15,17 +15,17 @@ The Models included in study are as follows:
 The below is a breif short introduction of the models that will be discussed and analyzed in the study.
 
 \subsection{Polkadot ELVES}
-Polkadot is a sharded L0 multichain network the enables cross-chain interoperability and scalablity. It utilizes ELVES (Economic Last Validation Enforcement System) to ensure data availability and validity of the parachains.
+Polkadot is a sharded L0 multichain network the enables cross-chain interoperability and scalablity \cite{polkadot_article}. It utilizes ELVES (Economic Last Validation Enforcement System) to ensure data availability and validity of the parachains.
 Polkadot uses a hybrid consensus mechanism which uses BABE for block production and GRANDPA for its block finality. ELVES uses Reed Solomon encoding to split the data into chunks and then disperse it all across the network.
 
-Polkadot uses Nominated Proof of Stake (NPoS) consensus mechanism which allows token holders to nominate entrusted validators to secure the network.
+Polkadot uses Nominated Proof of Stake (NPoS) consensus mechanism which allows token holders to nominate entrusted validators to secure the network\cite{Overview_of_polkadot}.
 
 
 
 \subsection{Celestia}
-Celestia is one of the first mover in the modular Data Availability solution space playing a major role in L2 and rollups developments. Celestia as of now utilizes 2D-Reed Solomon Erasure coding to split data into chunks and then encode into a matrix extension Namespaced Merkel Trees are then used to ensure the retirval and validity of the data. The root of the NMT is then stored in the block header.
+Celestia is one of the first mover in the modular Data Availability solution space playing a major role in L2 and rollups developments. Celestia as of now utilizes 2D-Reed Solomon Erasure coding to split data into chunks and then encode into a matrix extension Namespaced Merkel Trees are then used to ensure the retirval and validity of the data. The root of the NMT is then stored in the block header \cite{AlBassam_LazyLedger}.
 
-As of now Celestia uses Tenderming consensus mechanism which uses BFT (Byzantine Fault Tolerance) style mechanism to ensure the finality of the blocks
+As of now Celestia uses Tendermint consensus mechanism which uses BFT (Byzantine Fault Tolerance) style mechanism to ensure the finality of the blocks \cite{AlBassam_LazyLedger}.
 
 \subsection{Espresso Tiramisu}
 Espresso-Tiramisu DA resolves the Data availability scaling issue with a three layred system below is the short overview of these three layers.
@@ -94,8 +94,8 @@ Coefficient & & & & & \\
 \multicolumn{6}{|c|}{\textbf{Key Features}} \\
 \hline
 Unique & Cross-chain & First modular & Web2 CDN & High-speed & Application \\
-Advantages & interoperability & DA solution & integration & sharding & Specific Data \\
- & via parachains & for rollups & (Cocoa layer) & ~100k TPS & Retrieval (ASDR) \\
+Advantages & interoperability & DA solution & integration (Cocoa layer) & sharding & Specific Data \\
+ & via parachains & for rollups & (High speed retrieval) & ~100k TPS & Retrieval (ASDR) \\
 \hline
 \end{tabular}
 \label{tab:da_comparison}
