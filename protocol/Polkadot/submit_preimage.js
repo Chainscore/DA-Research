@@ -5,8 +5,8 @@ const { blake2AsU8a } = require('@polkadot/util-crypto');
 const { u8aToHex } = require('@polkadot/util'); // <-- fixed import
 
 const WS = process.env.WS || 'wss://westend-rpc.polkadot.io';
-const MNEMONIC = process.env.SENDER_SEED || '//Alice';
-const SIZE = parseInt(process.env.SIZE || '1024', 10); // 1 KiB
+const MNEMONIC = process.env.SENDER_SEED || '//Bob';
+const SIZE = '10'; // 1 KiB
 
 async function main() {
   const api = await ApiPromise.create({ provider: new WsProvider(WS) });
@@ -24,11 +24,16 @@ async function main() {
   console.log('Payload size', payloadU8.length, 'bytes');
   console.log('blake2_256 hash:', hashHex);
 
-  // find preimage call (handle naming differences)
-  const callFn = (api.tx.preimage && (api.tx.preimage.notePreimage || api.tx.preimage.note_preimage))
-                || (api.tx.Preimage && (api.tx.Preimage.notePreimage || api.tx.Preimage.note_preimage));
+  // preimage call
+
+  // refer https://polkadot.js.org/docs/polkadot/extrinsics/
+
+  // is storage a good option ?? https://polkadot.js.org/docs/polkadot/storage
+
+  const callFn = api.tx.preimage.notePreimage 
+
   if (!callFn) {
-    console.error('preimage.notePreimage not found in metadata. Inspect api.tx to find the correct name.');
+    console.error('preimage.notePreimage not found in metadata');
     process.exit(1);
   }
 
@@ -58,7 +63,7 @@ async function main() {
         process.exit(0);
       }
 
-      console.log('Query result raw:', stored?.toString() || stored);
+      // console.log('Query result raw:', stored?.toString() || stored);
 
       // print a small hex sample if possible
       if (stored && stored.toHex) {

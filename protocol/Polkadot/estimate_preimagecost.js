@@ -5,7 +5,7 @@ const { u8aToHex } = require('@polkadot/util');
 
 const WS = process.env.WS || 'wss://westend-rpc.polkadot.io';
 const MNEMONIC = process.env.MNEMONIC || '//Alice';
-const SIZE = parseInt(process.env.SIZE || '1024', 10);
+const SIZE = parseInt(process.env.SIZE || '10', 10);
 
 async function main() {
   const api = await ApiPromise.create({ provider: new WsProvider(WS) });
