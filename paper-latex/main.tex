@@ -9,6 +9,21 @@
 \usepackage{adjustbox} % for resizing
 \usepackage{array} % for better column types
 \usepackage{graphicx}
+\usepackage{float}  % For H placement specifier
+\usepackage{graphicx}
+\usepackage{float}    % for [H] placement if you want exact placement
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+
+\graphicspath{{./figures/}}
+\captionsetup{
+    font=small,
+    labelfont=bf,
+    width=0.9\textwidth
+}
 
 \title{Comparative Study of Data Availability Schemes in Various Blockchains}
 \author{
@@ -40,6 +55,9 @@
 
 % \section{Conclusion}
 % \input{sections/conclusion.tex}
+
+\clearpage  % This will force a page break
+
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}

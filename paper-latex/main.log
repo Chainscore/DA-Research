@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.8.25)  27 SEP 2025 14:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.8.25)  29 SEP 2025 16:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -369,57 +369,102 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \sift@deathcycles=\count293
 \@vwid@loff=\dimen194
 \@vwid@roff=\dimen195
-)) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+)) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count294
+\float@exts=\toks30
+\float@box=\box60
+\@float@everytoks=\toks31
+\@floatcapt=\box61
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/03/12 v3.6j Customizing captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
+\caption@tempdima=\dimen196
+\captionmargin=\dimen197
+\caption@leftmargin=\dimen198
+\caption@rightmargin=\dimen199
+\caption@width=\dimen256
+\caption@indent=\dimen257
+\caption@parindent=\dimen258
+\caption@hangindent=\dimen259
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEtablestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\normalfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptionsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspace \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\normalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONconference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi \fi  on input line 1176.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count295
+\c@continuedfloat=\count296
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: rotating package is loaded.
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/02/19 v1.6 Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 239.
+\c@subfigure=\count297
+Package caption Info: New subtype `subtable' on input line 239.
+\c@subtable=\count298
+) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count294
-\l__pdf_internal_box=\box60
-) (./main.aux)
+\l__color_backend_stack_int=\count299
+\l__pdf_internal_box=\box62
+) (./main.aux
+
+LaTeX Warning: Label `fig:latency1' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 
 -- Lines per column: 56 (exact).
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count295
-\scratchdimen=\dimen196
-\scratchbox=\box61
-\nofMPsegments=\count296
-\nofMParguments=\count297
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count298
-\MPscratchDim=\dimen197
-\MPnumerator=\count299
-\makeMPintoPDFobject=\count300
-\everyMPtoPDFconversion=\toks31
+\scratchcounter=\count300
+\scratchdimen=\dimen260
+\scratchbox=\box63
+\nofMPsegments=\count301
+\nofMParguments=\count302
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count303
+\MPscratchDim=\dimen261
+\MPnumerator=\count304
+\makeMPintoPDFobject=\count305
+\everyMPtoPDFconversion=\toks33
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 19.
+Package hyperref Info: Link coloring OFF on input line 34.
  (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
  (./sections/introduction.tex [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
@@ -430,44 +475,57 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )) [2
 
 ] [3] (./sections/methodology.tex
-<./figures/dummy_graph.png, id=97, 505.89pt x 361.35pt>
+<./figures/dummy_graph.png, id=105, 505.89pt x 361.35pt>
 File: ./figures/dummy_graph.png Graphic file (type png)
 <use ./figures/dummy_graph.png>
-Package pdftex.def Info: ./figures/dummy_graph.png  used on input line 16.
-(pdftex.def)             Requested size: 258.0pt x 184.28606pt.
+Package pdftex.def Info: ./figures/dummy_graph.png  used on input line 51.
+(pdftex.def)             Requested size: 201.60077pt x 144.0026pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 16--17
- [][] 
+Overfull \hbox (106.19843pt too wide) in paragraph at lines 52--52
+[] [] 
  []
 
 File: ./figures/dummy_graph.png Graphic file (type png)
 <use ./figures/dummy_graph.png>
-Package pdftex.def Info: ./figures/dummy_graph.png  used on input line 26.
-(pdftex.def)             Requested size: 258.0pt x 184.28606pt.
+Package pdftex.def Info: ./figures/dummy_graph.png  used on input line 70.
+(pdftex.def)             Requested size: 201.60077pt x 144.0026pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 26--27
- [][] 
+Overfull \hbox (106.19843pt too wide) in paragraph at lines 71--71
+[] [] 
+ []
+
+[4
+
+
+ <./figures/dummy_graph.png>]
+File: ./figures/dummy_graph.png Graphic file (type png)
+<use ./figures/dummy_graph.png>
+Package pdftex.def Info: ./figures/dummy_graph.png  used on input line 88.
+(pdftex.def)             Requested size: 201.60077pt x 144.0026pt.
+
+Overfull \hbox (106.19843pt too wide) in paragraph at lines 89--89
+[] [] 
  []
 
 File: ./figures/dummy_graph.png Graphic file (type png)
 <use ./figures/dummy_graph.png>
-Package pdftex.def Info: ./figures/dummy_graph.png  used on input line 36.
-(pdftex.def)             Requested size: 258.0pt x 184.28606pt.
+Package pdftex.def Info: ./figures/dummy_graph.png  used on input line 106.
+(pdftex.def)             Requested size: 201.60077pt x 144.0026pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 36--37
- [][] 
+Overfull \hbox (106.19843pt too wide) in paragraph at lines 107--107
+[] [] 
  []
 
 File: ./figures/dummy_graph.png Graphic file (type png)
 <use ./figures/dummy_graph.png>
-Package pdftex.def Info: ./figures/dummy_graph.png  used on input line 48.
-(pdftex.def)             Requested size: 258.0pt x 184.28606pt.
+Package pdftex.def Info: ./figures/dummy_graph.png  used on input line 125.
+(pdftex.def)             Requested size: 201.60077pt x 144.0026pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 48--49
- [][] 
+Overfull \hbox (106.19843pt too wide) in paragraph at lines 126--126
+[] [] 
  []
 
-) (./main.bbl
+) [5] (./main.bbl
 Underfull \hbox (badness 2261) in paragraph at lines 36--37
 []\OT1/ptm/m/n/8 N. Pro-to-col, ``The near white pa-per,'' []$https : / / pages . near . org / papers /
  []
@@ -484,28 +542,29 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4
+[6
 
-
- <./figures/dummy_graph.png>] [5
 
 ] (./main.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8E62919BD278C546B11B2D12B3BE53DE;1772.
+(rerunfilecheck)             Checksum: 5FFD35099251B8E281AF3D9DADB1BAE7;1926.
  ) 
 Here is how much of TeX's memory you used:
- 11382 strings out of 476034
- 185650 string characters out of 5792864
+ 12883 strings out of 476034
+ 214729 string characters out of 5792864
  1873388 words of memory out of 6000000
- 31634 multiletter control sequences out of 15000+600000
- 548662 words of font info for 95 fonts, out of 8000000 for 9000
+ 33118 multiletter control sequences out of 15000+600000
+ 549437 words of font info for 96 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
- 75i,10n,76p,864b,446s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,117p,864b,516s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (5 pages, 144055 bytes).
+Output written on main.pdf (6 pages, 148214 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 132 compressed objects within 2 object streams
- 32 named destinations out of 1000 (max. 500000)
- 118 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 168 PDF objects out of 1000 (max. 8388607)
+ 144 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 134 words of extra memory for PDF output out of 10000 (max. 10000000)
 
