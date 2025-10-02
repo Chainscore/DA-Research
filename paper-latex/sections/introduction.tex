@@ -60,7 +60,7 @@ As for consensus Avail uses BABE/GRANDPA hybrid consensus used by polkadot for b
 \hline
 \multicolumn{6}{|c|}{\textbf{Consensus \& Architecture}} \\
 \hline
-Consensus & BABE + & Tendermint & HotShot & Nightshade & BABE + \\
+Consensus & BABE + & Tendermint & Permissionless & Nightshade & BABE + \\
 Mechanism & GRANDPA(PoS) & BFT & PoS & Sharding & GRANDPA(PoS) \\
 \hline
 DA Model & Reed-Solomon & 2D Reed-Solomon & Three-layer & Sharding-based & KZG + 2D \\
@@ -73,15 +73,15 @@ Total Validators & 600 & 100 & 100 & 300 & 105 \\
 \hline
 \multicolumn{6}{|c|}{\textbf{Performance Metrics}} \\
 \hline
-Block Time & 20s & 6s & $\sim$6s & 1s & 20s \\
+Block Time & 20s & 6s & $\sim$5s & 1s & 20s \\
 \hline
 Block Size & 5 MB & 8 MB & 1 MB & 4 MB & 4 MB \\
 \hline
-TPS & 10 & 0.48 & N/A & 53 & 420 \\
+TPS & 10 & 0.48 & 0.8 & 53 & 420 \\
 \hline
 Max Throughput & 40 MB/s & $\sim$0.0159 MB/s & $\sim$5 MB/s & 16MB/s & $\sim$0.2 MB/s \\
 \hline
-Finality & 6--30s & 5--15s & N/A & 1--2s & 20--40s \\
+Finality & 6--30s & 5--15s & 1--2s & 1--2s & 20--40s \\
 \hline
 \multicolumn{6}{|c|}{\textbf{Economic \& Security}} \\
 \hline
