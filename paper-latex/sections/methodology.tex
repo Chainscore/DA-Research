@@ -2,18 +2,40 @@ In this section, we detail the methods and approaches we will be using in our re
 
 
 \subsection{Benchmarking Design}
-The benchmarking design will focus on evaluating the performance of various Data Availability (DA) solutions under controlled conditions. We will simulate different network environments and data loads to assess how each solution performs in terms of key metrics.
+The Benchmarking design will be structured to evaluate the performance of all the data availability solutions under the study. 
+\vspace{1em}
 
 \subsubsection{Polkadot}
+For Benchmarking of polkadot's ELVES we are using Paseo testnet and polkadots mainnet for benchmarking. The current test code implements system remarks and preimages for submission of data, measuring the transaction fees, existential deposit and time taken for finalization of the block.  
+
+\vspace{1em}
 
 \subsubsection{Celestia}
+We are planning to use celestia's RPC endpoints and Cosmos SDKs for benchmarking.
+\vspace{1em}
 
 \subsubsection{Espresso's Tiramisu}
+For Espresso's Tiramisu, we utilize their three-layered data availability architecture through their API endpoints. As of now, our testing framework implements:
+\begin{itemize}
+     \item Data availability metrics through REST API endpoints
+    \item Block analysis including TPS calculations and size measurements
+\end{itemize}
+\vspace{1em}
+
 
 \subsubsection{NEAR}
+To test NEAR's sharded data availability, we are using NEAR's testnet and mainnet. We are planning to setup and run a local testnet node of NEAR and also use NEAR's SDKs for benchmarking.
+
+\vspace{1em}
 
 \subsubsection{Avail}
-
+For Avail's benchmarking we have currently utilized avails JavaScript SDK and Python implementations. The code framework includes:
+\begin{itemize}
+    \item Block bloat testing with automatic payload size adjustment
+    \item Telemetry probing for network metrics
+    \item Data submission through AppID-based categorization
+    \item Block retrieval and verification mechanisms
+\end{itemize}
 
 \subsection{Performance}
 % ---- Item 1 ----
@@ -26,12 +48,28 @@ This section will analyze the maximum throughput capabilities of different DA so
     \item \textbf{Environment:} Simulated network with controlled conditions
 \end{itemize}
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\linewidth]{./figures/dummy_graph.png}
-    \caption{Comparative Throughput Analysis of DA Solutions}
-    \label{fig:throughput1}
-\end{figure}
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[width=0.8\linewidth]{./figures/dummy_graph.png}
+%     \caption{Comparative Throughput Analysis of DA Solutions}
+%     \label{fig:throughput1}
+% \end{figure}
+
+\begin{table}[h!]
+\centering
+\caption{Comparative Throughput Analysis of DA Solutions}
+\label{tab:throughput}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{Protocol} & \textbf{Polkadot} & \textbf{Celestia} & \textbf{Espresso} & \textbf{NEAR} & \textbf{Avail} \\
+\hline
+Throughput (MB/s) & X & X & X & X & X \\
+Network Load & Low & Medium & High & Medium & Low \\
+Peak Performance & X MB/s & X MB/s & X MB/s & X MB/s & X MB/s \\
+\hline
+\end{tabular}
+\end{table}
+
 
 \vspace{1em}
 
