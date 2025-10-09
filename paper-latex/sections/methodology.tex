@@ -1,221 +1,226 @@
-In this section, we detail the methods and approaches we will be using in our research. The methodology is structured as follows:
+In this section, we detail the methods and approaches we will be using in our research. 
+The methodology is structured as follows:
 
+\begin{enumerate}
+    \item \textbf{Benchmarking}
+    \begin{enumerate}
+        \item Design
+        \item Performance
+        \item Worst Case Scenario
+        \item Efficiency
+    \end{enumerate}
+    \item \textbf{Security Assumptions}
+    \item \textbf{Validator Costing}
+\end{enumerate}
 
-\subsection{Benchmarking Design}
-The Benchmarking design will be structured to evaluate the performance of all the data availability solutions under the study. 
+% ==========================================================
+% I.1 BENCHMARKING
+% ==========================================================
+\subsection{\textbf{Benchmarking}}
+
+% ----------------------------------------------------------
+% 1.1.1 DESIGN
+% ----------------------------------------------------------
+\subsubsection{\textbf{Design}}
+For benchmarking design a code module will be developed to evaluate the performance of all the data availability solutions under the study. 
 \vspace{1em}
 
-\subsubsection{Polkadot}
-For Benchmarking of polkadot's ELVES we are using Paseo testnet and polkadots mainnet for benchmarking. The current test code implements system remarks and preimages for submission of data, measuring the transaction fees, existential deposit and time taken for finalization of the block.  
-
-\vspace{1em}
-
-\subsubsection{Celestia}
-We are planning to use celestia's RPC endpoints and Cosmos SDKs for benchmarking.
-\vspace{1em}
-
-\subsubsection{Espresso's Tiramisu}
-For Espresso's Tiramisu, we utilize their three-layered data availability architecture through their API endpoints. As of now, our testing framework implements:
+% Polkadot
+\paragraph{Polkadot}
+For benchmarking of polkadot's ELVES we are using \textbf{Paseo testnet} and \textbf{Polkadot's mainnet}. The current test code implements:
 \begin{itemize}
-     \item Data availability metrics through REST API endpoints
+    \item System remarks for submission of data.
+    \item Measuring the transaction fees
+    \item Time taken for finalization of the block.
+\end{itemize}
+[We are also planning to use polkadot's on-chain telemetry (telemetry.polkadot.io) and logs for benchmarking.]
+\vspace{1em}
+
+% Celestia
+\paragraph{Celestia}
+For benchmarking Celestia's data availability solution, we utilize their \textbf{RPC} to submit and retrieve data blobs from the DA layer with their namespaces.
+[We will also use the \textbf{Cosmos SDK} to interact with Celestia nodes and perform various operations such as data submission, retrieval, and verification.]
+\vspace{1em}
+
+% Espresso
+\paragraph{Espresso's Tiramisu}
+For Espresso's Tiramisu, we utilized their three-layered data availability architecture through their \textbf{API} endpoints. As of now, our testing framework implements:
+\begin{itemize}
+    \item Data availability metrics through \textbf{API} endpoints (query.main.net.espresso.network)
     \item Block analysis including TPS calculations and size measurements
 \end{itemize}
+[We are also planning to set up a local testnet node of Espresso and use their SDKs for more in-depth benchmarking.]
 \vspace{1em}
 
-
-\subsubsection{NEAR}
-To test NEAR's sharded data availability, we are using NEAR's testnet and mainnet. We are planning to setup and run a local testnet node of NEAR and also use NEAR's SDKs for benchmarking.
-
+% NEAR
+\paragraph{NEAR}
+For benchmarking NEAR's sharded data availability, we use \textbf{NEAR's testnet} and \textbf{mainnet} environments. 
+Our benchmarking setup uses near-api and a custom smart contract deployed with near-sdk, which allows storing and retrieving base64 encoded data blobs on-chain. 
+We record the transaction time, retrieval latency, and cost per MB to compare NEAR’s blob storage performance with other DA systems.
 \vspace{1em}
 
-\subsubsection{Avail}
-For Avail's benchmarking we have currently utilized avails JavaScript SDK and Python implementations. The code framework includes:
+% Avail
+\paragraph{Avail}
+For Avail's benchmarking we have currently utilized avails JavaScript \textbf{SDK} and Python implementations. The code framework includes:
 \begin{itemize}
     \item Block bloat testing with automatic payload size adjustment
     \item Telemetry probing for network metrics
-    \item Data submission through AppID-based categorization
+    \item Data submission through \textbf{AppID}-based categorization
     \item Block retrieval and verification mechanisms
 \end{itemize}
 
-\subsection{Performance}
-% ---- Item 1 ----
-\subsubsection{Throughput Analysis}
-This section will analyze the maximum throughput capabilities of different DA solutions under various network conditions/data sizes. We measure transactions per second (TPS) and data processing capacity.
 
+\vspace{2em}
+
+% ----------------------------------------------------------
+% 1.1.2 PERFORMANCE
+% ----------------------------------------------------------
+\subsubsection{\textbf{Performance}}
+\vspace{1em}
+
+\paragraph{\textbf{Throughput Analysis}}
+This section will analyze the maximum throughput capabilities of different DA solutions under various network conditions/data sizes.
 \begin{itemize}
     \item \textbf{Test Parameters:} Time taken, data sizes
     \item \textbf{Metrics:} MB/s
     \item \textbf{Environment:} Simulated network with controlled conditions
 \end{itemize}
 
-% \begin{figure}[h!]
-%     \centering
-%     \includegraphics[width=0.8\linewidth]{./figures/dummy_graph.png}
-%     \caption{Comparative Throughput Analysis of DA Solutions}
-%     \label{fig:throughput1}
-% \end{figure}
-
-\begin{table}[h!]
-\centering
-\caption{Comparative Throughput Analysis of DA Solutions}
-\label{tab:throughput}
-\begin{tabular}{|l|c|c|c|c|c|}
-\hline
-\textbf{Protocol} & \textbf{Polkadot} & \textbf{Celestia} & \textbf{Espresso} & \textbf{NEAR} & \textbf{Avail} \\
-\hline
-Throughput (MB/s) & X & X & X & X & X \\
-Network Load & Low & Medium & High & Medium & Low \\
-Peak Performance & X MB/s & X MB/s & X MB/s & X MB/s & X MB/s \\
-\hline
-\end{tabular}
-\end{table}
-
+\begin{table}[h!] \centering \caption{Comparative Throughput Analysis of DA Solutions} \label{tab:throughput_vertical} \setlength{\tabcolsep}{5pt} % reduce column padding 
+    \renewcommand{\arraystretch}{1.1} % tighten row spacing 
+    \begin{tabular}{|l|c|c|c|} \hline \textbf{Protocol} & \textbf{Throughput (MB/s)} \\ 
+        \hline Polkadot & X \\ 
+        Celestia & X \\ 
+        Espresso & X \\ 
+        NEAR & X \\ 
+        Avail & X \\ \hline 
+    \end{tabular}
+ \end{table}
 
 \vspace{1em}
 
-% ---- Item 3 ----
-\subsubsection{TPS}
-This section analyzes the transactions per second (TPS) capabilities of different DA solutions. We measure transactions per second (TPS) and data processing capacity.
+
+\paragraph{\textbf{TPS}}
+This section analyzes the transactions per second (TPS) capabilities of different DA solutions.
 \begin{itemize}
     \item \textbf{Test Parameters:} Network conditions, data sizes, node count
     \item \textbf{Metrics:} TPS
     \item \textbf{Environment:} Simulated network with controlled conditions
 \end{itemize}
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\linewidth]{./figures/dummy_graph.png}
-    \caption{Comparative Latency Analysis of DA Solutions}
-    \label{fig:latency1}
-\end{figure}
+\begin{table}[h!] \centering \caption{Comparative TPS Analysis of DA Solutions} \label{tab:throughput_vertical} \setlength{\tabcolsep}{5pt} % reduce column padding 
+    \renewcommand{\arraystretch}{1.1} % tighten row spacing 
+    \begin{tabular}{|l|c|c|c|} \hline \textbf{Protocol} & \textbf{TPS} \\ 
+        \hline Polkadot & X \\ 
+        Celestia & X \\ 
+        Espresso & X \\ 
+        NEAR & X \\ 
+        Avail & X \\ \hline 
+    \end{tabular}
+ \end{table}
 
-\vspace{1em}
+\vspace{3em}
 
-% ---- Item 5 ----
-\subsubsection{Cost per MB}
-This section analyzes the cost per megabyte (MB) of data processed by different DA solutions. We measure the cost efficiency and resource utilization.
+
+\paragraph{\textbf{Cost per MB}}
+This section analyzes the cost per megabyte (MB) of data processed by different DA solutions.
 \begin{itemize}
     \item \textbf{Test Parameters:} Data sizes, Cost in native token conversion to USD
     \item \textbf{Metrics:} \$/MB
     \item \textbf{Environment:} Simulated network with controlled conditions
 \end{itemize}
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\linewidth]{./figures/dummy_graph.png}
-    \caption{Comparative Cost per MB Analysis of DA Solutions}
-    \label{fig:costpermb}
-\end{figure}
+% (table here...)
+
+\begin{table}[h!] \centering \caption{Comparative \$/MB Analysis of DA Solutions} \label{tab:throughput_vertical} \setlength{\tabcolsep}{5pt} % reduce column padding 
+    \renewcommand{\arraystretch}{1.1} % tighten row spacing 
+    \begin{tabular}{|l|c|c|c|} \hline \textbf{Protocol} & \textbf{Cost (\$/MB)} \\ 
+        \hline Polkadot & X \\ 
+        Celestia & X \\ 
+        Espresso & X \\ 
+        NEAR & X \\ 
+        Avail & X \\ \hline 
+    \end{tabular}
+ \end{table}
 
 \vspace{1em}
 
 
-\subsubsection{Latency}
+\paragraph{\textbf{Latency}}
 This section will analyze the maximum time taken by the DA solution to finalize a block.
-
 \begin{itemize}
     \item \textbf{Test Parameters:} Network conditions, data sizes, node count
     \item \textbf{Metrics:} seconds (s)
     \item \textbf{Environment:} Simulated network with controlled conditions
 \end{itemize}
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\linewidth]{./figures/dummy_graph.png}
-    \caption{Comparative Latency Analysis of DA Solutions}
-    \label{fig:latency1}
-\end{figure}
+% (table here...)'
+\begin{table}[h!] \centering \caption{Comparative Latency Analysis of DA Solutions} \label{tab:throughput_vertical} \setlength{\tabcolsep}{5pt} % reduce column padding 
+    \renewcommand{\arraystretch}{1.1} % tighten row spacing 
+    \begin{tabular}{|l|c|c|c|} \hline \textbf{Protocol} & \textbf{Latency (s)} \\ 
+        \hline Polkadot & X \\ 
+        Celestia & X \\ 
+        Espresso & X \\ 
+        NEAR & X \\ 
+        Avail & X \\ \hline 
+    \end{tabular}
+ \end{table}
+\vspace{1em}
 
-\vspace{10em}
 
-
-
-% ---- Item 4 ----
-\subsubsection{Max Block Size}
-This section analyzes the maximum block size capabilities of different DA solutions. We measure the maximum block size and data processing capacity.
+\paragraph{\textbf{Max Block Size}}
+This section analyzes the maximum block size capabilities of different DA solutions.
 \begin{itemize}
     \item \textbf{Test Parameters:} Network conditions, data sizes, node count
     \item \textbf{Metrics:} Block size (MB)
     \item \textbf{Environment:} Simulated network with controlled conditions
 \end{itemize}
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\linewidth]{./figures/dummy_graph.png}
-    \caption{Comparative Block Size Analysis of DA Solutions}
-    \label{fig:blocksize}
-\end{figure}
+% (table here...)
+\begin{table}[h!] \centering \caption{Comparative Block Size Analysis of DA Solutions} \label{tab:throughput_vertical} \setlength{\tabcolsep}{5pt} % reduce column padding 
+    \renewcommand{\arraystretch}{1.1} % tighten row spacing 
+    \begin{tabular}{|l|c|c|c|} \hline \textbf{Protocol} & \textbf{Block Size (MB)} \\ 
+        \hline Polkadot & X \\ 
+        Celestia & X \\ 
+        Espresso & X \\ 
+        NEAR & X \\ 
+        Avail & X \\ \hline 
+    \end{tabular}
+ \end{table}
 
-% remove this vspace later
 \vspace{1em}
 
 
-\subsection{Security Assumptions}
+% ----------------------------------------------------------
+% 1.1.3 WORST CASE SCENARIO
+% ----------------------------------------------------------
+\subsubsection{\textbf{Worst Case Scenario}}
+In this section, we will evaluate the worst-case performance scenarios for each DA solution. 
+This includes analyzing how each solution handles extreme conditions such as high network latency, large data loads, and potential attacks or failures within the network.
 
-% change thisss later
-In this section, we outline the security assumptions made during the evaluation of the DA solutions. These assumptions are critical for understanding the context in which the solutions are being assessed and the potential vulnerabilities that may arise.
+\vspace{1em}
 
+% ----------------------------------------------------------
+% 1.1.4 EFFICIENCY
+% ----------------------------------------------------------
+\subsubsection{\textbf{Efficiency}}
+This section focuses on comparative efficiency based on best and worst metrics of throughput, TPS, and cost per MB results. 
+Efficiency metrics are derived from normalized performance ratios under controlled network environments.
 
-\subsection{Validator Costing}
-In this section, we will analyze the costs incurred by validators in maintaining and operating each DA solution. This includes hardware costs, bandwidth costs, and any other operational expenses associated with running a validator node.
+\vspace{1em}
 
+% ==========================================================
+% I.2 SECURITY ASSUMPTIONS
+% ==========================================================
+\subsection{\textbf{Security Assumptions}}
+In this section, we outline the security assumptions made during the evaluation of the DA solutions. 
+These assumptions are critical for understanding the context in which the solutions are being assessed and the potential vulnerabilities that may arise.
 
-\subsection{Worst Case Performance}
-In this section, we will evaluate the worst-case performance scenarios for each DA solution. This includes analyzing how each solution handles extreme conditions such as high network latency, large data loads, and potential attacks or failures within the network.
+\vspace{1em}
 
-% \subsection{Parameters descriptions}
-
-
-% We will be using the following parameters for this comparative analysis. Having a general understanding of these parameters will help in better understanding the study.
-
-% \vspace{1em}
-
-% 1. \textbf{Consensus Mechanism}: The underlying protocol on chain that ensures the agreement on the state of the blockchain among validator nodes.For example, Proof of Stake (PoS), Byzantine Fault Tolerance (BFT), Proof of Work (PoW) etc.
-% \vspace{1em}
-
-% 2. \textbf{Data Availability Model}: The specific approach used to ensure that all necessary data is accessible and retrievable by all participants in the blockchain network. For example, Reed-Solomon Erasure Coding, 2D Reed-Solomon with Namespaced Merkle Trees etc.
-% \vspace{1em}
-
-% 3. \textbf{Throughput}: The maximum rate at which a DA solution can process data, typically measured in Megabytes per second (MB/s).
-% \vspace{1em}
-
-% 4. \textbf{Latency}: The time taken for a DA solution to finalize a block, typically measured in seconds (s).
-% \vspace{1em}
-
-% 5. \textbf{Transactions Per Second (TPS)}: The number of transactions a DA solution can handle per second.
-% \vspace{1em}
-
-% 6. \textbf{Block Size}: The maximum size of a block that can be processed by the DA solution, typically measured in Megabytes (MB).
-% \vspace{1em}
-
-% 7. \textbf{Cost per MB}: The cost incurred to process one Megabyte (MB) of data using the DA solution, typically measured in USD.
-% \vspace{1em}
-
-% 8. \textbf{Nakamoto Coefficient}: A measure of the decentralization of a blockchain network, indicating the minimum number of entities that would need to collude to compromise the network's security.
-% \vspace{1em}
-
-% \subsection{Code Module Setup}
-% The code module will be set up for all the DA solution to run in a simulated environment. This will help us to benchmark the performance of each DA solution under controlled conditions. The code module will have the below specified structure:
-
-
-% Also the code module will be open sourced for the community to use and verify the results.
-% \subsection{Comparative Graphs}
-% We will be using various comparative factor to graph out the differences in the data availability solutions. We will also provide a code based module setup that will generate the graphs based on the performance of the actual data availability solutions.
-
-
-% ---- Item 2 ----
-
-
-
-
-
-% \subsection{Data Collection}
-% Data was collected through surveys distributed to a sample population. The survey included questions designed to assess various parameters relevant to our study.
-
-% \subsection{Data Analysis}
-% The collected data was analyzed using statistical methods, including descriptive statistics and inferential statistics, to draw meaningful conclusions.
-
-% \subsection{Limitations}
-% We acknowledge certain limitations in our methodology, including potential biases in survey responses and the representativeness of the sample. 
-
-% Future research may address these limitations by employing a more diverse sample and utilizing mixed methods for data collection.
+% ==========================================================
+% I.3 VALIDATOR COSTING
+% ==========================================================
+\subsection{\textbf{Validator Costing}}
+In this section, we will analyze the costs incurred by validators in maintaining and operating each DA solution. 
+This includes hardware costs, bandwidth costs, and any other operational expenses associated with running a validator node.
