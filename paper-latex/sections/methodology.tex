@@ -55,7 +55,7 @@ For Espresso's Tiramisu, we utilized their three-layered data availability archi
 
 % NEAR
 \paragraph{NEAR}
-For benchmarking NEAR's sharded data availability, we use \textbf{NEAR's testnet} and \textbf{mainnet} environments. 
+For benchmarking NEAR's sharded data availability, we use \textbf{NEAR's} \textbf{mainnet} environments. 
 Our benchmarking setup uses near-api and a custom smart contract deployed with near-sdk, which allows storing and retrieving base64 encoded data blobs on-chain. 
 We record the transaction time, retrieval latency, and cost per MB to compare NEAR’s blob storage performance with other DA systems.
 \vspace{1em}
@@ -84,7 +84,6 @@ This section will analyze the maximum throughput capabilities of different DA so
 \begin{itemize}
     \item \textbf{Test Parameters:} Time taken, data sizes
     \item \textbf{Metrics:} MB/s
-    \item \textbf{Environment:} Simulated network with controlled conditions
 \end{itemize}
 
 \begin{table}[h!] \centering \caption{Comparative Throughput Analysis of DA Solutions} \label{tab:throughput_vertical} \setlength{\tabcolsep}{5pt} % reduce column padding 
@@ -106,7 +105,6 @@ This section analyzes the transactions per second (TPS) capabilities of differen
 \begin{itemize}
     \item \textbf{Test Parameters:} Network conditions, data sizes, node count
     \item \textbf{Metrics:} TPS
-    \item \textbf{Environment:} Simulated network with controlled conditions
 \end{itemize}
 
 \begin{table}[h!] \centering \caption{Comparative TPS Analysis of DA Solutions} \label{tab:throughput_vertical} \setlength{\tabcolsep}{5pt} % reduce column padding 
@@ -128,7 +126,6 @@ This section analyzes the cost per megabyte (MB) of data processed by different 
 \begin{itemize}
     \item \textbf{Test Parameters:} Data sizes, Cost in native token conversion to USD
     \item \textbf{Metrics:} \$/MB
-    \item \textbf{Environment:} Simulated network with controlled conditions
 \end{itemize}
 
 % (table here...)
@@ -152,7 +149,6 @@ This section will analyze the maximum time taken by the DA solution to finalize 
 \begin{itemize}
     \item \textbf{Test Parameters:} Network conditions, data sizes, node count
     \item \textbf{Metrics:} seconds (s)
-    \item \textbf{Environment:} Simulated network with controlled conditions
 \end{itemize}
 
 % (table here...)'
@@ -172,9 +168,8 @@ This section will analyze the maximum time taken by the DA solution to finalize 
 \paragraph{\textbf{Max Block Size}}
 This section analyzes the maximum block size capabilities of different DA solutions.
 \begin{itemize}
-    \item \textbf{Test Parameters:} Network conditions, data sizes, node count
+    \item \textbf{Test Parameters:} Data sizes.
     \item \textbf{Metrics:} Block size (MB)
-    \item \textbf{Environment:} Simulated network with controlled conditions
 \end{itemize}
 
 % (table here...)
@@ -192,12 +187,124 @@ This section analyzes the maximum block size capabilities of different DA soluti
 \vspace{1em}
 
 
+
+\paragraph{\textbf{Data Retrieval}}
+This section analyzes the maximum data retrieval time capabilities of different DA solutions i.e. the time taken to retrieve a specific size/piece of data from the network.
+\begin{itemize}
+    \item \textbf{Test Parameters:} Network conditions, data sizes.
+    \item \textbf{Metrics:} Retrieval time (s)
+\end{itemize}
+
+% (table here...)
+\begin{table}[h!] \centering \caption{Data Retrieval Latency Analysis of DA Solutions} \label{tab:throughput_vertical} \setlength{\tabcolsep}{5pt} % reduce column padding 
+    \renewcommand{\arraystretch}{1.1} % tighten row spacing 
+    \begin{tabular}{|l|c|c|c|} \hline \textbf{Protocol} & \textbf{Latency (s)} \\ 
+        \hline Polkadot & X \\ 
+        Celestia & X \\ 
+        Espresso & X \\ 
+        NEAR & X \\ 
+        Avail & X \\ \hline 
+    \end{tabular}
+ \end{table}
+
+\vspace{1em}
 % ----------------------------------------------------------
 % 1.1.3 WORST CASE SCENARIO
 % ----------------------------------------------------------
 \subsubsection{\textbf{Worst Case Analysis}}
 In this section, we will evaluate the worst-case performance scenarios for each DA solution. 
 This includes analyzing how each solution handles extreme conditions such as high network latency, large data loads, and potential attacks or failures within the network.
+
+
+\vspace{1em}
+
+\paragraph{\textbf{Cost per MB (Inclusion Phase)}}
+This sub-subsection evaluates the cost per megabyte (MB) incurred during worst-case data inclusion scenarios for each DA solution. 
+We measure how on-chain congestion, gas fee surges, and payload sizes affect the overall inclusion cost.
+
+\begin{itemize}
+    \item \textbf{Test Parameters:} Network congestion, data size (1KB–1MB), gas/fee volatility
+    \item \textbf{Metrics:} Cost per MB (\$/MB)
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption{Worst-Case Cost per MB During Data Inclusion}
+\label{tab:worstcase_cost_inclusion}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{|l|c|}
+    \hline
+    \textbf{Protocol} & \textbf{Worst-Case Cost (\$/MB)} \\
+    \hline
+    Polkadot & X \\
+    Celestia & X \\
+    Espresso & X \\
+    NEAR & X \\
+    Avail & X \\
+    \hline
+\end{tabular}
+\end{table}
+
+\vspace{2em}
+
+\paragraph{\textbf{Latency (Worst Case)}}
+This measures the maximum inclusion time under stress conditions (e.g., full block utilization, network congestion).
+\begin{itemize}
+    \item \textbf{Test Parameters:} Network latency, data size, node count
+    \item \textbf{Metrics:} Latency (seconds)
+    \item \textbf{Finality Impact:} Evaluates how consensus finality duration contributes to overall latency, including delayed confirmations or resistance under high-load conditions.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption{Worst-Case Data Latency}
+\label{tab:worstcase_inclusion_latency}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{|l|c|}
+    \hline
+    \textbf{Protocol} & \textbf{Latency (s)} \\
+    \hline
+    Polkadot & X \\
+    Celestia & X \\
+    Espresso & X \\
+    NEAR & X \\
+    Avail & X \\
+    \hline
+\end{tabular}
+\end{table}
+
+\vspace{3em}
+
+
+\paragraph{\textbf{Data Retrieval (Worst Case)}}
+We measure the time required to fetch data blobs under adverse conditions.
+\begin{itemize}
+    \item \textbf{Test Parameters:} Network latency, node failures, retrieval requests per second
+    \item \textbf{Metrics:} Data Retrieval Time (s)
+    \item \textbf{Node Failure Impact:} Evaluates retrieval degradation under partial or complete node unavailability, including re-routing latency and redundancy recovery performance.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption{Worst-Case Data Retrieval Latency}
+\label{tab:worstcase_retrieval_latency}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{|l|c|}
+    \hline
+    \textbf{Protocol} & \textbf{Retrieval Latency (s)} \\
+    \hline
+    Polkadot & X \\
+    Celestia & X \\
+    Espresso & X \\
+    NEAR & X \\
+    Avail & X \\
+    \hline
+\end{tabular}
+\end{table}
+
 
 \vspace{5em}
 
@@ -208,14 +315,95 @@ This includes analyzing how each solution handles extreme conditions such as hig
 This section focuses on comparative efficiency based on best and worst metrics of throughput, TPS, and cost per MB results. 
 Efficiency metrics are derived from normalized performance ratios under controlled network environments.
 
+\vspace{2em}
+
+\paragraph{\textbf{Data}}
+This subsection evaluates data transmission and Latency efficiency across DA (Data Availability) solutions.  
+It compares bandwidth utilization, encoding overhead, and redundancy management under variable network conditions.  
+Key considerations include:
+\vspace{1em}
+
+\begin{itemize}
+    \item \textbf{Latency:} Reflects the overall efficiency of data flow, capturing how quickly transactions move from submission to availability. Lower latency directly translates to higher throughput and better real-time performance across DA layers.
+\end{itemize}
+
+These metrics provide a foundation for comparing the raw data handling capability of each DA layer independent of consensus or proof generation complexity.
+
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.4\textwidth]{./figures/output.png}
-    \caption{Dummy efficiency comparison across DA solutions}
+    \caption{Latency efficiency comparison across DA solutions}
     \label{fig:efficiency_boxplot}
 \end{figure}
 
+\vspace{2em}
+
+% ===================== NEW SUBSECTION =====================
+\paragraph{\textbf{Storage}}
+This subsection focuses on storage efficiency and persistence trade-offs once data becomes part of the network.  
+It captures how network-level encoding, redundancy schemes, and node distribution affect the overall data footprint and storage cost.
+
+Key considerations include:
 \vspace{1em}
+
+\begin{itemize}
+    \item \textbf{ Data Size (Post-Inclusion):} Analyzes how the effective data size increases once added to the network due to encoding, sharding, and availability sampling. This metric quantifies real storage growth compared to raw payload size, reflecting true on-network storage overhead.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption{Data Storage and Transfer Metrics Across DA Solutions}
+\label{tab:data_efficiency_metrics}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|l|c|c|c|}
+    \hline
+    \textbf{Protocol} & \textbf{Data Size} \\
+    \hline
+    Polkadot & X \\
+    Celestia & X \\
+    Espresso & X \\
+    NEAR & X \\
+    Avail & X \\
+    \hline
+\end{tabular}
+\end{table}
+
+\vspace{2em}
+
+% ===================== PROOF SUBSECTION =====================
+\paragraph{\textbf{Proof}}
+This subsection focuses on efficiency aspects related to proof generation, verification, and proof size optimization.  
+Proof-related efficiency directly impacts network scalability and client-side verification costs.  
+Key focus points include:
+\begin{itemize}
+    \item \textbf{Proof Size:} Analysis of proof compactness and its relation to network bandwidth and storage.
+    \item \textbf{Proof Computation:} Benchmarks proof generation latency and verification complexity.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption{Proof Size and Computation Metrics Across DA Solutions}
+\label{tab:proof_efficiency_metrics}
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|l|c|c|}
+    \hline
+    \textbf{Protocol} & \textbf{Proof Size (kB)} & \textbf{Proof Computation (ms)} \\
+    \hline
+    Polkadot & X & X \\
+    Celestia & X & X \\
+    Espresso & X & X \\
+    NEAR & X & X \\
+    Avail & X & X \\
+    \hline
+\end{tabular}
+\end{table}
+
+This evaluation highlights the trade-offs between computational efficiency and proof soundness within different DA architectures.
+
+\vspace{1em}
+
 
 % ==========================================================
 % I.2 SECURITY ASSUMPTIONS
@@ -227,25 +415,47 @@ These assumptions are critical for understanding the context in which the soluti
 
 \begin{table}[ht]
 \centering
-\caption{Security Assumptions of Major Data Availability Solutions}
-\setlength{\tabcolsep}{4pt}
+\caption{Security Assumptions of Major DA Solutions}
+\setlength{\tabcolsep}{3pt}  % Reduced padding
 \renewcommand{\arraystretch}{1.25}
-\begin{tabular}{lp{6.2cm}}
+\begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{1.5cm}|}
 \hline
-\textbf{Network} & \textbf{Security Assumption Summary} \\ 
+\textbf{Network} & 
+\textbf{Honest Ratio} & 
+\textbf{Validator Count} & 
+\textbf{And More...} \\
 \hline
-\textbf{Polkadot (ELVES)} & Requires $\geq 2/3$ honest validators. Data availability is guaranteed through deterministic erasure-coded chunk distribution and validator bitfield votes; light clients rely on validator honesty (no DAS). \\[2pt]
-\textbf{Celestia} & Secure if at least one honest full node serves samples. Uses probabilistic Data Availability Sampling (DAS) with fraud proofs to detect withheld or invalid erasure-coded data. \\[2pt]
-\textbf{Espresso (Tiramisu)} & Assumes majority-honest committee or fallback network. Combines fast optimistic path (committee-based) with verifiable fallback via cryptographic proofs (VID). \\[2pt]
-\textbf{NEAR (Blob Store)} & Relies on $\geq 2/3$ honest validators under Nightshade consensus. Provides inclusion proofs but no erasure coding or sampling; trust tied to validator set. \\[2pt]
-\textbf{Avail} & Secure if $\geq 1$ honest node performs sampling. Uses KZG polynomial commitments with DAS and fraud proofs, offering light-client verifiability similar to Celestia. \\ 
+Polkadot & 
+$\geq \frac{2}{3}$ & 
+600 &
+\\
+\hline
+Celestia & 
+$\geq 1$ & 
+100 &
+ \\
+\hline
+Espresso & 
+$> \frac{1}{2}$ &
+100 &
+ \\
+\hline
+NEAR & 
+$\geq \frac{2}{3}$ &
+500 &
+\\
+\hline
+Avail & 
+$\geq 1$ & 
+105 &
+\\
 \hline
 \end{tabular}
 \label{tab:da-security-compact}
 \end{table}
 
+\vspace{5em}
 
-\vspace{1em}
 
 % ==========================================================
 % I.3 VALIDATOR COSTING
