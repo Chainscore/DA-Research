@@ -415,47 +415,40 @@ These assumptions are critical for understanding the context in which the soluti
 
 \begin{table}[ht]
 \centering
-\caption{Security Assumptions of Major DA Solutions}
-\setlength{\tabcolsep}{3pt}  % Reduced padding
+\caption{Security Assumptions of Major Data Availability Solutions}
+\setlength{\tabcolsep}{6pt}
 \renewcommand{\arraystretch}{1.25}
-\begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{1.5cm}|}
+\begin{tabular}{|p{2cm}|p{3cm}|p{2cm}|}
 \hline
-\textbf{Network} & 
-\textbf{Honest Ratio} & 
-\textbf{Validator Count} & 
-\textbf{And More...} \\
+\textbf{Network} &
+\textbf{Honest Majority Requirement} &
+\textbf{Validator Count (Approx.)} \\
 \hline
-Polkadot & 
-$\geq \frac{2}{3}$ & 
-600 &
-\\
+\textbf{Polkadot (ELVES)} &
+$\geq \tfrac{2}{3}$ honest validators &
+600 \\
 \hline
-Celestia & 
-$\geq 1$ & 
-100 &
- \\
+\textbf{Celestia} &
+$\geq \tfrac{2}{3}$ honest for consensus; $\geq 1$ honest full/light node for DA sampling &
+100 \\
 \hline
-Espresso & 
-$> \frac{1}{2}$ &
-100 &
- \\
+\textbf{Espresso (Tiramisu)} &
+$\geq \tfrac{2}{3}$ honest DA committee member or fallback node &
+100\\
 \hline
-NEAR & 
-$\geq \frac{2}{3}$ &
-500 &
-\\
+\textbf{NEAR} &
+$\geq \tfrac{2}{3}$ honest validators per shard &
+500 \\
 \hline
-Avail & 
-$\geq 1$ & 
-105 &
-\\
+\textbf{Avail} &
+$\geq \tfrac{2}{3}$ honest for consensus; $\geq 1$ honest sampler for DA detection &
+105 \\
 \hline
 \end{tabular}
-\label{tab:da-security-compact}
+\label{tab:da-security-assumptions}
 \end{table}
 
-\vspace{5em}
-
+\vspace{3em}
 
 % ==========================================================
 % I.3 VALIDATOR COSTING

@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1760338593.10464 "main.aux" "main.bbl" "main" 1760346627.99111 0
+["bibtex main"] 1760358521.62471 "main.aux" "main.bbl" "main" 1760358524.05083 0
   "./references.bib" 1760338560.57492 5204 21845b673d1da9659cf993d613b313c0 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1760346627.58108 12249 c4669977e839ec0bf3da120920fc6b65 "pdflatex"
+  "main.aux" 1760358523.72801 12283 e9e388bc1f3c5bea398f987593fa5cd4 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1760346626.79028 "/home/pranjal/Desktop/DA-Research/paper-latex/main.tex" "main.pdf" "main" 1760346627.9915 0
+["pdflatex"] 1760358522.92856 "/home/pranjal/Desktop/DA-Research/paper-latex/main.tex" "main.pdf" "main" 1760358524.05123 0
   "/home/pranjal/Desktop/DA-Research/paper-latex/main.tex" 1760341496.57146 2115 217f39601fa35fb08c92893aeea21f0b ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1721433600 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -30,7 +30,6 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm" 1136768653 1292 21c1c5bfeaebccffdb478fd231a0997d ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
-  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
@@ -118,12 +117,12 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1756121400.08188 4547210 0b4d8bce3d83ee4f50b88a57a6a0d7ef ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1756121199 7759950 f921b52f412d0f875badbe6f299f5a03 ""
   "figures/output.png" 1760026711.78006 92872 a6e706de2ff42e295ff28869d6b17422 ""
-  "main.aux" 1760346627.58108 12249 c4669977e839ec0bf3da120920fc6b65 "pdflatex"
-  "main.bbl" 1760338593.2525 3945 6572d1d1d43a7f117a568eff701d65d5 "bibtex main"
-  "main.out" 1760346627.58308 1759 8af7f0537693a267ecbce3867ba995ec "pdflatex"
+  "main.aux" 1760358523.72801 12283 e9e388bc1f3c5bea398f987593fa5cd4 "pdflatex"
+  "main.bbl" 1760358521.74104 3945 6572d1d1d43a7f117a568eff701d65d5 "bibtex main"
+  "main.out" 1760358523.73001 1759 8af7f0537693a267ecbce3867ba995ec "pdflatex"
   "main.tex" 1760341496.57146 2115 217f39601fa35fb08c92893aeea21f0b ""
   "sections/introduction.tex" 1760339792.04972 7053 17c8927fb5f6dfa03580ac5d1be63a00 ""
-  "sections/methodology.tex" 1760346626.51741 17494 8dc1de6762217bd11a75ca5dc9a7f5b5 ""
+  "sections/methodology.tex" 1760358522.66203 17777 f78ec549bb46aa4d6c7b101b0bba717c ""
   (generated)
   "main.aux"
   "main.log"
