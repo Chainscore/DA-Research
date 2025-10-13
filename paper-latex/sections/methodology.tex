@@ -418,31 +418,32 @@ These assumptions are critical for understanding the context in which the soluti
 \caption{Security Assumptions of Major Data Availability Solutions}
 \setlength{\tabcolsep}{6pt}
 \renewcommand{\arraystretch}{1.25}
-\begin{tabular}{|p{2cm}|p{3cm}|p{2cm}|}
+\begin{tabular}{|p{2cm}|p{3cm}|p{2cm}|p{1cm}|}
 \hline
 \textbf{Network} &
 \textbf{Honest Majority Requirement} &
-\textbf{Validator Count (Approx.)} \\
+\textbf{Validator Count (Approx.)} &
+\textbf{And more...} \\
 \hline
 \textbf{Polkadot (ELVES)} &
 $\geq \tfrac{2}{3}$ honest validators &
-600 \\
+600 & X\\
 \hline
 \textbf{Celestia} &
 $\geq \tfrac{2}{3}$ honest for consensus; $\geq 1$ honest full/light node for DA sampling &
-100 \\
+100 & X\\
 \hline
 \textbf{Espresso (Tiramisu)} &
 $\geq \tfrac{2}{3}$ honest DA committee member or fallback node &
-100\\
+100 & X\\
 \hline
 \textbf{NEAR} &
 $\geq \tfrac{2}{3}$ honest validators per shard &
-500 \\
+500 & X\\
 \hline
 \textbf{Avail} &
 $\geq \tfrac{2}{3}$ honest for consensus; $\geq 1$ honest sampler for DA detection &
-105 \\
+105 & X\\
 \hline
 \end{tabular}
 \label{tab:da-security-assumptions}
