@@ -27,7 +27,7 @@ For benchmarking design a code module will be developed to evaluate the performa
 
 % Polkadot
 \paragraph{Polkadot}
-For benchmarking of polkadot's ELVES we are using \textbf{Polkadot's mainnet}. The current test code implements:
+For benchmarking of Polkadot's ELVES we are using its Mainnet and Localnet. The current test code implements:
 \begin{itemize}
     \item System remarks for submission of data.
     \item Measuring the transaction fees
@@ -55,7 +55,7 @@ For Espresso's Tiramisu, we utilized their three-layered data availability archi
 
 % NEAR
 \paragraph{NEAR}
-For benchmarking NEAR's sharded data availability, we use \textbf{NEAR's} \textbf{mainnet} environments. 
+For benchmarking NEAR's sharded data availability, we use \textbf{NEAR's} \textbf{Mainnet} environments. 
 Our benchmarking setup uses near-api and a custom smart contract deployed with near-sdk, which allows storing and retrieving base64 encoded data blobs on-chain. 
 We record the transaction time, retrieval latency, and cost per MB to compare NEAR’s blob storage performance with other DA systems.
 \vspace{1em}
@@ -88,7 +88,7 @@ This section will analyze the maximum throughput capabilities of different DA so
 
 \begin{table}[h!] \centering \caption{Comparative Throughput Analysis of DA Solutions} \label{tab:throughput} \setlength{\tabcolsep}{5pt} % reduce column padding 
     \renewcommand{\arraystretch}{1.1} % tighten row spacing 
-    \begin{tabular}{|l|c|c|c|} \hline \textbf{Protocol} & \textbf{Throughput (MB/s)} \\ 
+    \begin{tabular}{|l|c|c|c|} \hline \textbf{Protocol} & \textbf{Max Throughput (MB/s)} \\ 
         \hline Polkadot & X \\ 
         Celestia & X \\ 
         Espresso & X \\ 
@@ -98,7 +98,12 @@ This section will analyze the maximum throughput capabilities of different DA so
  \end{table}
 
 \vspace{1em}
-
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{./figures/line-compare.png}
+    \caption{\textbf{[DUMMY]} Comparative Throughput over time}
+    \label{fig:efficiency_boxplot}
+\end{figure}
 
 \paragraph{\textbf{TPS}}
 This section analyzes the transactions per second (TPS) capabilities of different DA solutions.
@@ -109,7 +114,7 @@ This section analyzes the transactions per second (TPS) capabilities of differen
 
 \begin{table}[h!] \centering \caption{Comparative TPS Analysis of DA Solutions} \label{tab:tps} \setlength{\tabcolsep}{5pt} % reduce column padding 
     \renewcommand{\arraystretch}{1.1} % tighten row spacing 
-    \begin{tabular}{|l|c|c|c|} \hline \textbf{Protocol} & \textbf{TPS} \\ 
+    \begin{tabular}{|l|c|c|c|} \hline \textbf{Protocol} & \textbf{Max TPS} \\ 
         \hline Polkadot & X \\ 
         Celestia & X \\ 
         Espresso & X \\ 
@@ -127,8 +132,6 @@ This section analyzes the cost per megabyte (MB) of data processed by different 
     \item \textbf{Test Parameters:} Data sizes, Cost in native token conversion to USD
     \item \textbf{Metrics:} \$/MB
 \end{itemize}
-
-% (table here...)
 
 \begin{table}[h!] \centering \caption{Comparative \$/MB Analysis of DA Solutions} \label{tab:cost_per_mb} \setlength{\tabcolsep}{5pt} % reduce column padding 
     \renewcommand{\arraystretch}{1.1} % tighten row spacing 
@@ -218,7 +221,7 @@ This includes analyzing how each solution handles extreme conditions such as hig
 
 \vspace{1em}
 
-\paragraph{\textbf{Cost per MB (Inclusion Phase)}}
+\paragraph{\textbf{Cost per MB}}
 This sub-subsection evaluates the cost per megabyte (MB) incurred during worst-case data inclusion scenarios for each DA solution. 
 We measure how gas fee surges, and payload sizes affect the overall inclusion cost.
 
@@ -248,7 +251,7 @@ We measure how gas fee surges, and payload sizes affect the overall inclusion co
 
 \vspace{2em}
 
-\paragraph{\textbf{Latency (Worst Case)}}
+\paragraph{\textbf{Latency}}
 This measures the maximum inclusion time under stress conditions (e.g., full block utilization).
 \begin{itemize}
     \item \textbf{Test Parameters:} Network latency, data size, node count
@@ -278,7 +281,7 @@ This measures the maximum inclusion time under stress conditions (e.g., full blo
 \vspace{3em}
 
 
-\paragraph{\textbf{Data Retrieval (Worst Case)}}
+\paragraph{\textbf{Data Retrieval}}
 We measure the time required to fetch data blobs under adverse conditions.
 \begin{itemize}
     \item \textbf{Test Parameters:} Network latency, node failures, retrieval requests per second
@@ -336,7 +339,16 @@ These metrics provide a foundation for comparing the raw data handling capabilit
     \label{fig:efficiency_boxplot}
 \end{figure}
 
-\vspace{2em}
+\vspace{1em}
+
+\paragraph{\textbf{Costing}}
+Here we compare cost of storage across different sample sizes to analyze the increase in cost with demand.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{./figures/line-cost.png}
+    \caption{\textbf{[DUMMY]} Comparative Cost over different data sizes}
+    \label{fig:efficiency_boxplot}
+\end{figure}
 
 % ===================== NEW SUBSECTION =====================
 \paragraph{\textbf{Storage}}
@@ -418,32 +430,33 @@ These assumptions are critical for understanding the context in which the soluti
 \caption{Security Assumptions of Major Data Availability Solutions}
 \setlength{\tabcolsep}{6pt}
 \renewcommand{\arraystretch}{1.25}
-\begin{tabular}{|p{2cm}|p{3cm}|p{2cm}|p{1cm}|}
+\begin{tabular}{|p{2cm}|p{3.5cm}|p{2cm}|p{2cm}|p{2cm}|}
 \hline
 \textbf{Network} &
-\textbf{Honest Majority Requirement} &
+\textbf{Honest Majority} &
+\textbf{DA Sampling Size} &
 \textbf{Validator Count (Approx.)} &
-\textbf{And more...} \\
+\textbf{Nakamoto Coefficient} \\
 \hline
 \textbf{Polkadot (ELVES)} &
 $\geq \tfrac{2}{3}$ honest validators &
-600 & X\\
+600 & X & X \\
 \hline
 \textbf{Celestia} &
-$\geq \tfrac{2}{3}$ honest for consensus; $\geq 1$ honest full/light node for DA sampling &
-100 & X\\
+$\geq \tfrac{2}{3}$ & $\geq 1$ honest full/light node for DA sampling &
+100 & X \\
 \hline
 \textbf{Espresso (Tiramisu)} &
 $\geq \tfrac{2}{3}$ honest DA committee member or fallback node &
-100 & X\\
+100 & X & X \\
 \hline
 \textbf{NEAR} &
 $\geq \tfrac{2}{3}$ honest validators per shard &
-500 & X\\
+500 & X & X \\
 \hline
 \textbf{Avail} &
 $\geq \tfrac{2}{3}$ honest for consensus; $\geq 1$ honest sampler for DA detection &
-105 & X\\
+105 & X & X \\
 \hline
 \end{tabular}
 \label{tab:da-security-assumptions}
