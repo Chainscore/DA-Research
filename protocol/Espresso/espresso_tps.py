@@ -62,6 +62,32 @@ def calculate_statistics(blocks):
         'average_transactions_per_block': round(avg_transactions_per_block, 2)
     }
 
+
+def fetch_tps_data():
+    """
+    Fetch TPS data from protocol API
+    Returns: float - transactions per second
+    """
+    try:
+        # API call and data processing here
+        tps_value = 0.0  # Replace with actual calculation
+        # Fetch block data
+        blocks = fetch_block_data(100)
+    
+        if blocks is None:
+            return
+
+        stats = calculate_statistics(blocks)
+    
+        if stats:
+            print(f"Average TPS: {stats['average_tps']} transactions/second")
+            tps_value = stats['average_tps']
+        return float(tps_value)
+    except Exception as e:
+        print(f"Error fetching TPS: {str(e)}")
+        return 0.0
+    
+
 def main():
     print("Fetching 100 blocks from Espresso Network...")
     print("-" * 60)

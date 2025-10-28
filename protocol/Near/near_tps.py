@@ -1,24 +1,26 @@
-# https://api-docs.celenium.io/
-# https://api-mainnet.celenium.io/v1/stats/tps
+
 import requests
 import json
 
-# ...existing code...
-
 def fetch_tps_data():
+    """
+    Fetch TPS data from NEAR Blocks API
+    """
     API_URL = "https://api.nearblocks.io/v1/stats"
-
-    print('Fetching Near TPS data...')
+    
     try:
         response = requests.get(API_URL)
-        response.raise_for_status()
         data = response.json()
-        return data
-    except requests.exceptions.RequestException as e:
-        print(f"API Error: {str(e)}")
-        return []
-
-
+        
+        if 'stats' in data and len(data['stats']) > 0:
+            tps = float(data['stats'][0].get('tps', 0))
+            return tps
+            
+        return 0.0
+        
+    except Exception as e:
+        print(f"NEAR TPS Error: {str(e)}")
+        return 0.0
+    
 if __name__ == "__main__":
     data = fetch_tps_data()
-    print(f"\nFinal TPS: {data["stats"][0]['tps']}")

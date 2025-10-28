@@ -81,6 +81,46 @@ def calculate_tps(blocks):
     except KeyError as e:
         print(f"Error processing block data: {str(e)}")
         return 0
+
+import requests
+from datetime import datetime
+
+def fetch_tps_data():
+    """
+    Fetch TPS data from Celenium API
+    """
+    API_URL = "https://api-mainnet.celenium.io/v1/block"
+    
+    try:
+        response = requests.get(API_URL, params={'limit': 100})
+        data = response.json()
+        
+        blocks = data if isinstance(data, list) else data.get('data', [])
+        if not blocks:
+            return 0.0
+            
+        # Sort blocks by height
+        sorted_blocks = sorted(blocks, key=lambda x: x['height'])
+        
+        # Calculate TPS
+        first_block = sorted_blocks[0]
+        last_block = sorted_blocks[-1]
+        
+        start_time = datetime.fromisoformat(first_block['time'].replace('Z', '+00:00'))
+        end_time = datetime.fromisoformat(last_block['time'].replace('Z', '+00:00'))
+        
+        time_diff = (end_time - start_time).total_seconds()
+        if time_diff <= 0:
+            return 0.0
+            
+        total_txs = sum(len(block.get('message_types', [])) for block in blocks)
+        tps = float(total_txs) / time_diff
+        
+        return tps
+        
+    except Exception as e:
+        print(f"Celestia TPS Error: {str(e)}")
+        return 0.0
     
 if __name__ == "__main__":
     blocks_data = fetch_tps_data()

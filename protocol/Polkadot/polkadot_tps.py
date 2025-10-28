@@ -108,6 +108,44 @@ def calculate_tps(blocks):
                 tps = total_extrinsics / time_diff
                 return tps
 
+import requests
+from datetime import datetime
+
+def fetch_tps_data():
+    """
+    Fetch TPS data from Avail using Subscan API
+    """
+    blocks = fetch_block_info(page=0, row=100)
+    tps = 0
+    if isinstance(blocks, list):
+        # Calculate TPS
+        tps = calculate_tps(blocks)
+        
+        print("\nTPS Analysis:")
+        print(f"Transactions Per Second: {tps:.2f}")
+        print(f"Sample Period: {len(blocks)} blocks")
+        
+        # Calculate data submission rate
+        first_time = blocks[-1].get('block_timestamp')
+        last_time = blocks[0].get('block_timestamp')
+        time_period = last_time - first_time
+        
+        if time_period > 0:
+            data_rate = sum(
+                block.get('additional_meta', {}).get('submit_data_size', 0) 
+                for block in blocks
+            ) / time_period / 1024  # KB/s
+            
+            print(f"Data Submission Rate: {data_rate:.2f} KB/s")
+        
+        return tps
+
+    else:
+        print(f"Error: {blocks}")
+        return 0.0
+
+
+
 if __name__ == "__main__":
     blocks = fetch_block_info(page=0, row=100)
     
