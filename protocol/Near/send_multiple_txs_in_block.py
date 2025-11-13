@@ -14,9 +14,9 @@ ACCOUNT_ID = os.getenv("NEAR_ACCOUNT_ID")
 PRIVATE_KEY = os.getenv("NEAR_PRIVATE_KEY")
 # The contract ID you want to interact with
 CONTRACT_ID = os.getenv("NEAR_CONTRACT_ID")# The network to connect to (testnet or mainnet)
-NETWORK_URL = "https://rpc.testnet.fastnear.com"
+NETWORK_URL = "https://near-testnet.gateway.tatum.io/"
 # Number of transactions to send
-NUM_TRANSACTIONS = 50
+NUM_TRANSACTIONS = 1000
 
 async def send_multiple_transactions():
     """

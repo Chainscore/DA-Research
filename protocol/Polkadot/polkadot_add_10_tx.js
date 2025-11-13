@@ -41,14 +41,14 @@ async function main() {
   console.log('Free balance:', free);
 
   const transactions = [];
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 100000; i++) {
     const text = `DA-test-${i}`;
     const hex = '0x' + Buffer.from(text).toString('hex');
     const tx = api.tx.system.remark(hex);
     transactions.push(tx);
   }
 
-  console.log('Sending 10 transactions as one batch...');
+  console.log('Sending transactions as one batch...');
 
   // Build a single batch extrinsic (use batchAll if you prefer atomic)
   const batchTx = api.tx.utility.batch(transactions); // or batchAll
