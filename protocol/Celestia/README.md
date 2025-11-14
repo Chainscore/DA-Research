@@ -22,3 +22,50 @@ The `celestia_data.py` script provides a basic framework for submitting data blo
     *   **Data retrieval latency:** The time it takes to retrieve a data blob after it has been submitted.
     *   **Cost analysis:** The transaction fees associated with submitting data to the Celestia DA layer.
 3.  **Integrate with the broader study:** The data collected from these scripts will be used to compare the Celestia DA solution with other DA layers, as described in the grant proposal.
+
+## Running the Scripts
+
+The JavaScript-based scripts (`celestia_tps.js` and `celestia_max_tps.js`) are used for performance testing.
+
+### Prerequisites
+
+*   [Node.js](https://nodejs.org/) (v16 or later)
+*   [npm](https://www.npmjs.com/) (comes with Node.js)
+*   A running Celestia Light Node.
+
+### 1. Installation
+
+Install the necessary Node.js dependencies:
+
+```bash
+npm install
+```
+
+### 2. Authentication
+
+The scripts require an authentication token to communicate with your local Celestia node.
+
+1.  **Generate the token:**
+    ```bash
+    celestia light auth admin --p2p.network mocha
+    ```
+2.  **Export the token as an environment variable:**
+    Replace `<your-token>` with the output from the previous command.
+    ```bash
+    export AUTH_TOKEN="<your-token>"
+    ```
+    **Note:** This environment variable is only set for the current terminal session. You will need to set it again if you open a new terminal.
+
+### 3. Execution
+
+You can now run the test scripts.
+
+*   **`celestia_tps.js`:** Submits blobs one by one in separate transactions to measure transactions per second (TPS).
+    ```bash
+    node celestia_tps.js
+    ```
+*   **`celestia_max_tps.js`:** Submits a batch of blobs in a single transaction to test the maximum data throughput in a single block.
+    ```bash
+    node celestia_max_tps.js
+    ```
+
